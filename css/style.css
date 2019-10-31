@@ -144,7 +144,7 @@ nav a {
 .dot img {
   width: 100%;
 }
-.dot.active {
+.dot .background {
   background: #333;
 }
 
