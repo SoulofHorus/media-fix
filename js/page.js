@@ -38,3 +38,15 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+//modal code
+
+var modal = document.getElementById("mymodal");
+
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("../img/eagle.jpg");
+var captionText = document.getElementById("Eagle Nebula");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
