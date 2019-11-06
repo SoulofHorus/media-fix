@@ -1,4 +1,4 @@
-*// Page Scripts
+// Page Scripts
 // Mobile Navigaton Toggle
 function navToggle() { // creates a new function named navToggle
   var x = document.getElementById("main-nav"); // creates a variable set to #main-nav
