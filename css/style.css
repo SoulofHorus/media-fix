@@ -1,6 +1,9 @@
 /*-- Global Styles --*/
 :root {
   font-size: 18px;
+  --light: #ccc;
+  --dark: #000;
+  --accent: #EE0000;
 }
 * {
   box-sizing: border-box;
@@ -9,10 +12,11 @@ body, section, div, article, aside, h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   margin: 0;
 }
+body {background-color: var(--light);}
 
 /*-- Document Styles --*/
 footer {
-  background-color: #333;
+  background-color: var(--dark);
   color: #ddd;
   padding: 1em;
   text-align: center;
@@ -20,7 +24,7 @@ footer {
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: #333;
+  background-color: var(--dark);
   color: #DDD;
   padding: 1em;
   flex-direction: column;
