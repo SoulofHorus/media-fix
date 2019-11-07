@@ -40,18 +40,14 @@ function showSlides(n) {
 }
 //modal code
 
-var modal = document.getElementById("myModal");
-
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
-
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-  modal.style.display = "none";
-}
+// Image modal functions - Requires jQuery!!!
+$(".button").on("click", function() { // when item with class of button is clicked, fire function
+  var modal = $(this).data("modal"); // sets modal var equal to data attribute
+  $(modal).show(); // opens up modal (much code hidden here by jQuery)
+});
+$(".modal").on("click", function(e) { // sets up click function
+  var className = e.target.className; // var className set to event target
+  if(className === "modal" || className === "close"){ // if conditions are met...
+    $(this).closest(".modal").hide(); // then hide the modal
+  } // closes if-statement
+}); // closes function
